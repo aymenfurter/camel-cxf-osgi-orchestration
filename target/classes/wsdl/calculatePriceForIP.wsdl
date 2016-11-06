@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.aymenfurter.ch"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	targetNamespace="http://www.aymenfurter.ch">
+
+    <!-- Type definitions for input- and output parameters for webservice -->
+    <wsdl:types>
+        <xs:schema targetNamespace="http://www.aymenfurter.ch">
+            <xs:element name="inputLocalizedPrice">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="ipaddress"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="outputLocalizedPrice">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="price"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+
+    <!-- Message definitions for input and output -->
+    <wsdl:message name="inputLocalizedPrice">
+        <wsdl:part name="in" element="tns:inputLocalizedPrice"/>
+    </wsdl:message>
+    <wsdl:message name="outputLocalizedPrice">
+        <wsdl:part name="out" element="tns:outputLocalizedPrice"/>
+    </wsdl:message>
+
+    <!-- Port (interface) definitions -->
+    <wsdl:portType name="LocalizedPriceEndpoint">
+        <wsdl:operation name="LocalizedPrice">
+            <wsdl:input message="tns:inputLocalizedPrice"/>
+            <wsdl:output message="tns:outputLocalizedPrice"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <!-- Port bindings to transports and encoding - HTTP, document literal encoding is used -->
+    <wsdl:binding name="LocalizedPriceBinding" type="tns:LocalizedPriceEndpoint">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="LocalizedPrice">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body parts="in" use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body parts="out" use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <!-- Service definition -->
+    <wsdl:service name="LocalizedPriceEndpointService">
+        <wsdl:port name="LocalizedPriceEndpoint" binding="tns:LocalizedPriceBinding">
+            <soap:address location="http://localhost:9080/camel-example-cxf-proxy/webservices/incident"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

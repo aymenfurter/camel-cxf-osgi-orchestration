@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1478467532065
+Build-Jdk: 1.8.0_91
+Built-By: mika
+Bundle-Description: Orchistrate multiple soap services to one local endp
+ oint
+Bundle-ManifestVersion: 2
+Bundle-Name: Camel :: Example :: Orchistration with CXF :: OSGI
+Bundle-SymbolicName: ch.aymenfurter.camel-example-orchistration
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Export-Package: ch.aymenfurter.orchistration.mapping;uses:="org.apache.c
+ amel";version="1.0.0"
+Import-Package: javax.jws,javax.jws.soap,javax.xml.bind,javax.xml.bind.a
+ nnotation,javax.xml.namespace,javax.xml.ws,org.apache.camel;version="[2
+ .17,3)",org.apache.cxf.message;version="[3.1,4)",org.apache.cxf.transpo
+ rt.common.gzip;version="[3.1,4)",org.apache.cxf;version="[3.1,4)",org.a
+ pache.cxf.binding;version="[3.1,4)",org.apache.cxf.binding.corba,org.ap
+ ache.cxf.binding.soap;version="[3.1,4)",org.apache.cxf.binding.soap.spr
+ ing;version="[3.1,4)",org.apache.cxf.bus;version="[3.1,4)",org.apache.c
+ xf.bus.resource;version="[3.1,4)",org.apache.cxf.bus.spring;version="[3
+ .1,4)",org.apache.cxf.buslifecycle;version="[3.1,4)",org.apache.cxf.cat
+ alog;version="[3.1,4)",org.apache.cxf.configuration;version="[3.1,4)",o
+ rg.apache.cxf.configuration.spring;version="[3.1,4)",org.apache.cxf.end
+ point;version="[3.1,4)",org.apache.cxf.headers;version="[3.1,4)",org.ap
+ ache.cxf.management;version="[3.1,4)",org.apache.cxf.management.jmx,org
+ .apache.cxf.phase;version="[3.1,4)",org.apache.cxf.resource;version="[3
+ .1,4)",org.apache.cxf.service.factory;version="[3.1,4)",org.apache.cxf.
+ transport;version="[3.1,4)",org.apache.cxf.transport.http;version="[3.1
+ ,4)",org.apache.cxf.transport.http.policy;version="[3.1,4)",org.apache.
+ cxf.transport.http_jetty,org.apache.cxf.transport.jms,org.apache.cxf.wo
+ rkqueue;version="[3.1,4)",org.apache.cxf.wsdl;version="[3.1,4)",org.apa
+ che.cxf.wsdl11;version="[3.1,4)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
+Tool: Bnd-3.2.0.201605172007
