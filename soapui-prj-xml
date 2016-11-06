@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:aym="http://www.aymenfurter.ch">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <aym:inputLocalizedPrice>
+         <ipaddress>4.4.4.4</ipaddress>
+      </aym:inputLocalizedPrice>
+   </soapenv:Body>
+</soapenv:Envelope>
