@@ -1,4 +1,4 @@
-package ch.aymenfurter.orchistration.mapping;
+package ch.aymenfurter.orchestration.mapping;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;

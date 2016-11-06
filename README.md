@@ -1,8 +1,8 @@
-# CXF Orchistration OSGI Example
+# CXF Orchestration OSGI Example
 
 ### Introduction
 
-Orchistration with Camel CXF (OSGI)
+Orchestration with Camel CXF (OSGI)
 
 ### Build
 
@@ -25,5 +25,5 @@ To run the example on Apache Karaf 2.4.x
 
 
 #### Step 3: Deploy the example
-	install -s mvn:ch.aymenfurter/camel-example-orchistration/1.0.0-SNAPSHOT
+	install -s mvn:ch.aymenfurter/camel-example-orchestration/1.0.0-SNAPSHOT
 
