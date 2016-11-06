@@ -54,10 +54,10 @@
 		</cxf:properties>
 	</cxf:cxfEndpoint>
 
-	<bean id="pGeoPrice2GeoIP" class="ch.aymenfurter.orchistration.mapping.GeoPrice2GeoIP" />
-	<bean id="pGeoIP2Country" class="ch.aymenfurter.orchistration.mapping.GeoIP2Country" />
+	<bean id="pGeoPrice2GeoIP" class="ch.aymenfurter.orchestration.mapping.GeoPrice2GeoIP" />
+	<bean id="pGeoIP2Country" class="ch.aymenfurter.orchestration.mapping.GeoIP2Country" />
 	<bean id="pCountry2GeoPriceResponse"
-		class="ch.aymenfurter.orchistration.mapping.Country2GeoPriceResponse" />
+		class="ch.aymenfurter.orchestration.mapping.Country2GeoPriceResponse" />
 
 	<camelContext xmlns="http://camel.apache.org/schema/spring">
 		<route>
